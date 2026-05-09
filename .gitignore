@@ -1,0 +1,38 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Node
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Storage - DO NOT UPLOAD BOOKS OR USER DATA TO GITHUB
+backend/storage/books/*
+!backend/storage/books/.gitkeep
+backend/storage/data/*
+!backend/storage/data/.gitkeep
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
