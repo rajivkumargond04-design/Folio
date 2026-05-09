@@ -76,6 +76,8 @@ app.get('/health', (req, res) => {
 // Routes
 app.use('/api/auth', authLimiter, authRoutes);
 app.use('/api/books', generalLimiter, booksRoutes);
+app.use('/auth', authLimiter, authRoutes);
+app.use('/books', generalLimiter, booksRoutes);
 
 // 404 handler
 app.use((req, res) => {
