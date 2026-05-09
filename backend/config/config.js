@@ -8,7 +8,7 @@ export const CONFIG = {
   PORT: process.env.PORT || 3001,
   JWT_SECRET: process.env.JWT_SECRET || 'folio-super-secret-jwt-key-2024-private',
   JWT_EXPIRY: '7d',
-  BCRYPT_ROUNDS: 14,
+  BCRYPT_ROUNDS: parseInt(process.env.BCRYPT_ROUNDS, 10) || 10,
   STORAGE_PATH: path.resolve(__dirname, '../storage'),
   BOOKS_PATH: path.resolve(__dirname, '../storage/books'),
   DATA_PATH: path.resolve(__dirname, '../storage/data'),

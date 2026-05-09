@@ -73,6 +73,20 @@ app.get('/health', (req, res) => {
   });
 });
 
+// Root status endpoints for Render or API checks
+app.get('/', (req, res) => {
+  res.json({
+    status: 'Folio backend is running',
+    api: '/api',
+    message: 'This service only serves the API. Use the frontend on Netlify.',
+  });
+});
+app.get('/api', (req, res) => {
+  res.json({
+    status: 'Folio backend API is running',
+  });
+});
+
 // Routes
 app.use('/api/auth', authLimiter, authRoutes);
 app.use('/api/books', generalLimiter, booksRoutes);

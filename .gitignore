@@ -24,9 +24,11 @@ dist-ssr/
 *.sln
 *.sw?
 
-# Storage - DO NOT UPLOAD BOOKS OR USER DATA TO GITHUB
+# Storage - DO NOT UPLOAD USER DATA TO GITHUB
+# Allow sample PDF books to be included for demo deployments
 backend/storage/books/*
 !backend/storage/books/.gitkeep
+!backend/storage/books/*.pdf
 backend/storage/data/*
 !backend/storage/data/.gitkeep
 
